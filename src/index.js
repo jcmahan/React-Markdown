@@ -22,8 +22,12 @@ class DisplayContainer extends Component {
         return (
             <div>
                 <header className="Index-header">React Markdown</header>
-                <RawInput value={this.state.value} updateValue={this.updateValue}/>
-                <span dangerouslySetInnerHTML={this.convertMarkdown()}></span>
+                <div className="Result">
+                    <RawInput value={this.state.value} updateValue={this.updateValue}/>
+                    <div className="Result-area">
+                        <span dangerouslySetInnerHTML={this.convertMarkdown()}></span>
+                    </div>
+                </div>
             </div>
         )}
 }
@@ -31,7 +35,7 @@ class DisplayContainer extends Component {
 const RawInput = ({value, updateValue}) => {
     return (
         <div>
-            <textarea className="Type-here" rows="8" cols="145" onChange={updateValue} value={value}>
+            <textarea className="Type-here" rows="9" cols="70" placeholder="Type Markdown here..."onChange={updateValue} value={value}>
             </textarea>
         </div>
     )

@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Montserrat', sans-serif;
+
 }
 .Index-header {
   text-align: center;
@@ -10,6 +11,14 @@ body {
   padding: 25px;
 
 }
-.Type-here {
+/* .Type-here {
   margin-left: 25px; 
+} */
+.Result {
+  display: flex; 
+  justify-content: space-evenly; 
+}
+.Result-area {
+  width: 50%; 
+  border: 1px slategrey solid; 
 }
